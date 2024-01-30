@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -8,7 +9,9 @@ int main() {
   bool executing{false};
   char selection{};
   int number{};
-  int mean{};
+  double mean{};
+  int min{};
+  int max{};
   vector<int> list{};
 
   while (!executing) {
@@ -61,8 +64,28 @@ int main() {
       if (list.size() == 0) {
         cout << "Não existe nenhum número nesta lista." << endl;
       } else {
-        
+        min = list.at(0);
+        for (int numbers : list) {
+          if (numbers < min)
+            min = numbers;
+        }
+      cout << "O menor número da lista é " << min << endl;
       }
+      break;
+
+    case 'l':
+    case 'L':
+      if (list.size() == 0) {
+        cout << "Não existe nenhum número nesta lista." << endl;
+      } else {
+        max = list.at(0);
+        for (int numbers : list) {
+          if (numbers > max)
+            max = numbers;
+        }
+      cout << "O maior número da lista é " << max << endl;
+      }
+      break;
 
     case 'q':
     case 'Q':

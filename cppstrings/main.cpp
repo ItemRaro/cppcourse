@@ -5,17 +5,20 @@ using namespace std;
 
 int main() {
 
-  string nome;
-  string sobrenome;
-  string nome_completo;
+  string journal_entry_1 {"Isaac Newton"};
+  string journal_entry_2 {"Leibniz"};
 
-  cout << "Digite o seu primeiro nome: ";
-  getline(cin, nome);
-  cout << endl << "Digite seu sobrenome: ";
-  cin >> sobrenome;
+  journal_entry_1.erase(0, 6);
 
-  nome_completo = nome + " " + sobrenome;
-  cout << endl << "Seu nome completo é: " << nome_completo << endl;
+  if (journal_entry_1 < journal_entry_2) {
+    cout << journal_entry_1 << endl;
+    cout << journal_entry_2 << endl;
+  } else {
+    cout << journal_entry_2 << endl;
+    cout << journal_entry_1 << endl;    
+  }
+
+  journal_entry_2.swap(journal_entry_1);
 
   return 0;
 }

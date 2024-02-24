@@ -5,27 +5,28 @@ using namespace std;
 
 int main() {
 
-  cout << "Digite uma sequência de caracteres para sua pirâmide: ";
+  cout << "Digite uma sequência de caracteres: ";
   string letters;
   getline(cin, letters);
 
   size_t lines{letters.length()};
-  int counter{0};
+  int8_t counter{0};
   size_t looping{0};
 
   while (looping < lines) {
-    if (counter <= 0) {
-      for (size_t i; i < lines; i++) {
+    if (counter == 0) {
+      for (int8_t i{counter}; i < lines; i++) {
         cout << letters.at(i);
         counter++;
       }
+      cout << endl;
     } else {
-      for (int i{counter-1}; i >= 0; i--) {
+      for (int8_t i{counter-1}; i >= 0; i--) {
         cout << letters.at(i);
         counter--;
       }
+      cout << endl;
     }
-    cout << endl;
     looping++;
   }
 

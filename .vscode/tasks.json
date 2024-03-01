@@ -2,26 +2,6 @@
   "tasks": [
     {
       "type": "cppbuild",
-      "label": "C/C++: g++.exe arquivo de build ativo",
-      "command": "/usr/bin/g++",
-      "args": [
-        "-fdiagnostics-color=always",
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}/bin/${fileBasenameNoExtension}"
-      ],
-      "options": {
-        "cwd": "${fileDirname}"
-      },
-      "problemMatcher": [
-        "$gcc"
-      ],
-      "group": "build",
-      "detail": "Tarefa gerada pelo Depurador."
-    },
-    {
-      "type": "cppbuild",
       "label": "C/C++: g++ arquivo de build ativo",
       "command": "/usr/bin/g++",
       "args": [

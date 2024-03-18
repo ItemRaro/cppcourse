@@ -4,8 +4,17 @@
 
 using namespace std;
 
+void number_list();
+
 int main() {
 
+  number_list();
+
+  return 0;
+}
+
+void number_list(){
+  
   bool executing{false};
   char selection{};
   int number{};
@@ -97,6 +106,4 @@ int main() {
       cout << "Escolha inválida." << endl;
     }
   }
-
-  return 0;
 }

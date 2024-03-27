@@ -1,14 +1,31 @@
 #include <iostream>
 
 using namespace std;
+ 
+int main(){
 
-int main() {
+   int num{10};
+   int *ptr;
 
-  int x{2};
+   cout << "NUM variable value: " << num << endl;
+   cout << "NUM variable size: " << sizeof num << endl;
+   cout << "NUM variable memmory address: " << &num << endl;
 
-  x += x;
+   cout << "PTR variable value: " << ptr << endl;
+   cout << "PTR variable size: " << sizeof ptr << endl;
+   cout << "PTR variable memmory address: " << &ptr << endl;
 
-  cout << x << endl;
+   ptr = nullptr;
 
-  return 0;
+   cout << "PTR variable value: " << ptr << endl;
+   cout << "PTR variable size: " << sizeof ptr << endl;
+   cout << "PTR variable memmory address: " << &ptr << endl;
+
+   ptr = &num;
+
+   cout << "PTR variable value: " << ptr << endl;
+   cout << "PTR variable size: " << sizeof ptr << endl;
+   cout << "PTR variable memmory address: " << &ptr << endl;
+
+   return 0;
 }
